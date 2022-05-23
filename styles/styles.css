@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: grey;
+}
+
+header {
+    background-color: #EDE6DB;
+    padding: 30px;
+    text-align: center;
+}
+
+header p {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.playerName {
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+  
+  .playerName a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    border: 4px solid darkgray;
+    border-radius: 0.5rem;
+    padding: 3px;
+    background-color: #A64B2A;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .playerName a:hover {
+    background-color: rgba(135, 126, 50, 0.921);
+  }
+
+  .score {
+    border: 3px solid #FFEBC1;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 30px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  
+  .draw_totalPlays {
+    border: 3px solid #FFEBC1;
+    width: 350px;
+    margin: 20px auto;
+    font-size: 30px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  
+  .totalPlays {
+    margin-top: 15px;
+  }
+  
+  .badge {
+    background: grey;
+    color: white;
+    font-size: 15px;
+    padding: 3px 11px
+  }
+  
+  #player1-label {
+    position: absolute;
+    top: 22px;
+    left: -40px;
+  }
+  
+  #player2-label {
+    position: absolute;
+    top: 22px;
+    right: -55px;
+  }
+
+  .result {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  
+
+.btn {
+    margin-top: 30px;
+    background: #3491d9;
+    background-image: -webkit-linear-gradient(top, #3491d9, #2980b9);
+    background-image: -moz-linear-gradient(top, #3491d9, #2980b9);
+    background-image: -ms-linear-gradient(top, #3491d9, #2980b9);
+    background-image: -o-linear-gradient(top, #3491d9, #2980b9);
+    background-image: linear-gradient(to bottom, #3491d9, #2980b9);
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cfcf2;
+    background-image: -webkit-linear-gradient(top, #3cfcf2, #3498db);
+    background-image: -moz-linear-gradient(top, #3cfcf2, #3498db);
+    background-image: -ms-linear-gradient(top, #3cfcf2, #3498db);
+    background-image: -o-linear-gradient(top, #3cfcf2, #3498db);
+    background-image: linear-gradient(to bottom, #3cfcf2, #3498db);
+    text-decoration: none;
+  }
+
+  .vertical {
+      border-right: 2.5px solid black;
+      border-left: 2.5px solid black;
+  }
+
+  .horizontal {
+      border-top: 2.5px solid black;
+      border-bottom: 2.5px solid black;
+  }
+
+  td {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 45px;
+  }
+
+  table {
+      margin: 0 auto;
+      padding-top: 40px;
+  }
+
+  .xwin{
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: 0.25s;
+    padding: 50px;
+    z-index: 3;
+}
+
+.owin{
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: 0.25s;
+    padding: 50px;
+    z-index: 3;
+}
+
+.xboxred {
+    background-color: red;
+    transition: all 1s;
+}
+
+.oboxred {
+    background-color: blue;
+    transition: all 1s;
+}
