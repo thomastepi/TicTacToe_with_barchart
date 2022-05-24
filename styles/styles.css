@@ -90,10 +90,14 @@ header p {
   }
 
   .result {
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     font-weight: bold;
     padding-bottom: 20px;
+  }
+
+  #remarks {
+      display: none;
   }
   
 
@@ -123,6 +127,7 @@ header p {
     background-image: -o-linear-gradient(top, #3cfcf2, #3498db);
     background-image: linear-gradient(to bottom, #3cfcf2, #3498db);
     text-decoration: none;
+    cursor: pointer;
   }
 
   .vertical {
@@ -154,6 +159,7 @@ header p {
     transition: 0.25s;
     padding: 50px;
     z-index: 3;
+    color: #FAF0D7;
 }
 
 .owin{
@@ -162,15 +168,26 @@ header p {
     opacity: 1;
     transition: 0.25s;
     padding: 50px;
+    color: #FF8D29;
     z-index: 3;
 }
 
-.xboxred {
-    background-color: red;
+.tie{
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: 0.25s;
+    padding: 50px;
+    color: #BE8C63;
+    z-index: 3;
+}
+
+.xbox {
+    background-color: #FAF0D7;
     transition: all 1s;
 }
 
-.oboxred {
-    background-color: blue;
+.obox {
+    background-color: #FF8D29;
     transition: all 1s;
 }
