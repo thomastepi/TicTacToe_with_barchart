@@ -15,6 +15,7 @@ var body = document.getElementsByTagName('body');
 var result = document.querySelector('.result');
 var  btn = document.getElementsByTagName('button');
 
+// record score for X symbol and reload page
 function xwin() {
     player_1_score++;
     player1ScoreSpan.innerHTML = player_1_score;
@@ -23,6 +24,7 @@ function xwin() {
     }, 3000);
 }
 
+// record score for O symbol and reload page
 function owin() {
     player_2_score++;
     player2ScoreSpan.innerHTML = player_2_score;
@@ -31,7 +33,7 @@ function owin() {
     }, 3000);
 }
 
-
+// Alternate between symbols after each click
 for(var i=0; i<td.length; i++){
     td[i].addEventListener('click',function(){
         count++;
@@ -43,6 +45,7 @@ for(var i=0; i<td.length; i++){
     });
 }
 
+// Test to verify Win combination of symbols
 for(var i=0; i<td.length; i++){
     td[i].addEventListener('click',function(){
         total_plays++;
@@ -51,11 +54,11 @@ for(var i=0; i<td.length; i++){
             if(td[0].textContent === 'X'){
                 xwin();                
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
 
             for(var j=0; j<3; j++){
@@ -71,11 +74,11 @@ for(var i=0; i<td.length; i++){
             if(td[6].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
 
             for(var j=6; j<9; j++){
@@ -91,11 +94,11 @@ for(var i=0; i<td.length; i++){
             if(td[3].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
 
             for(var j=3; j<6; j++){
@@ -111,11 +114,11 @@ for(var i=0; i<td.length; i++){
             if(td[4].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
             if(td[0].textContent == 'X'){
                 td[0].classList.add('xbox');
@@ -133,11 +136,11 @@ for(var i=0; i<td.length; i++){
             if(td[2].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
             if(td[2].textContent == 'X'){
                 td[2].classList.add('xbox');
@@ -155,11 +158,11 @@ for(var i=0; i<td.length; i++){
             if(td[0].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
             if(td[0].textContent == 'X'){
                 td[0].classList.add('xbox');
@@ -177,11 +180,11 @@ for(var i=0; i<td.length; i++){
             if(td[1].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
             if(td[1].textContent == 'X'){
                 td[1].classList.add('xbox');
@@ -199,11 +202,11 @@ for(var i=0; i<td.length; i++){
             if(td[2].textContent === 'X'){
                 xwin();
                 result.classList.add('xwin')
-                result.textContent = 'Player 1 Has Won The Game!';
+                result.textContent = 'X Has Won The Game!';
             } else {
                 owin();
                 result.classList.add('owin')
-                result.textContent = 'Player 2 Has Won The Game!';
+                result.textContent = 'O Has Won The Game!';
             }
             if(td[2].textContent == 'X'){
                 td[2].classList.add('xbox');
@@ -217,6 +220,7 @@ for(var i=0; i<td.length; i++){
             
         }
 
+        // If game ends in a tie
         if(count == 9){
             result.classList.add('tie')
             result.textContent = "It's a tie game! Try again"
@@ -229,17 +233,7 @@ for(var i=0; i<td.length; i++){
     });
 }
 
-function resetBoard(){
-    td.forEach((item)=>{
-        item.textContent = "";
-        item.classList.remove('xbox');
-        item.classList.remove('obox');
-        
-    })
-    
-}
-
-// Assign Player Names
+// Assign Unique Player Names
 function newPlayerNames(){
     let player_1_name = prompt('Player1 Please Enter Your Name');
     let player_2_name = prompt('Player2 Please Enter Your Name');
