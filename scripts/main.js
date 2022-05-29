@@ -116,7 +116,7 @@ const testWin = (symbol) => {
     disableBoard();
     setTimeout(function() {
     gameReset();
-  }, 3000);
+  }, 4000);
     return true;
   }
 }
@@ -139,11 +139,11 @@ const disableBoard = () => {
 const testTie = () => {
   if (squaresLeft === 0) {
       result.classList.add('win');
-      result.textContent = "It's a tie game";
+      result.textContent = "It's a tie game! Try Again";
     disableBoard();
     setTimeout(function() {
       gameReset();
-    }, 3000);
+    }, 4000);
     return true;
   }
 }

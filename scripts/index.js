@@ -21,7 +21,7 @@ function xwin() {
     player1ScoreSpan.innerHTML = player_1_score;
     setTimeout(()=>{
         window.location.reload()
-    }, 3000);
+    }, 5000);
 }
 
 // record score for O symbol and reload page
@@ -30,7 +30,7 @@ function owin() {
     player2ScoreSpan.innerHTML = player_2_score;
     setTimeout(()=>{
         window.location.reload()
-    }, 3000);
+    }, 5000);
 }
 
 // Alternate between symbols after each click
