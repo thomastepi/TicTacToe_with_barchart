@@ -10,14 +10,35 @@
 <body>
     <header>
         <p>TIC TAC TOE Game</p>
-        <button class="btn" onclick="reloadPage()">Reset Game</button>
+        <!-- <button class="btn" onclick="reloadPage()">Reset Game</button> -->
     </header>
 
     <div class="multiPlayer">
-        <a href="main.html" id="multi-player">Player Vs Computer</a>
+        <a href="mode_select.html" id="multi-player">Mode Select</a>
     </div>
 
-    <div class="playerName">
+    <div id="register">
+      <form action="">
+        <div id="player_name">
+        <label for="name">
+          Player 1 Name:
+          <input type="text" id="name">
+        </label>
+        </div>
+        <div id="player_name">
+          <label for="name">
+            Player 2 Name:
+            <input type="text" id="name">
+          </label>
+          </div>
+        <div id="xter_select">
+        <button class="selectors" id="xbutton" onclick="chooseXorO('X')">X</button>
+        <button class="selectors" id="obutton" onclick="chooseXorO('O')">O</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="playerName">
         <a href="#" id="player-name" onclick="newPlayerNames()">Change Player Name</a>
       </div>  
       <div class="score">
@@ -37,7 +58,7 @@
         <div class="totalPlays">
           Total Plays: <span id="total-plays">0</span>
         </div>
-      </div>
+      </div> -->
 
       <div class="result">
         <p id="remarks">Remarks</p>

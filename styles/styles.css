@@ -207,3 +207,29 @@ header p {
     background-color: #FF8D29;
     transition: all 1s;
 }
+
+#register {
+  background-color: #7a7265;
+  width: 700px;
+  margin: 65px auto;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#player_name, #xter_select, #name {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.selectors {
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  margin-bottom: 15px;
+}

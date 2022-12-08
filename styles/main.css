@@ -122,3 +122,17 @@ header p {
     font-family: 'Montserrat', sans-serif;
     font-size: 45px;
   }
+
+  #register {
+    background-color: #7a7265;
+    width: 700px;
+    margin: 65px auto;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+#player_name, #xter_select, #name {
+  font-size: 30px;
+  padding: 10px;
+}
