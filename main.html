@@ -1,59 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
     <title>Tic Tac Toe</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <p>TIC TAC TOE Game</p>
-        <!-- <button class="btn" onclick="gameReset()">Reset Game</button> -->
+      <p>TIC TAC TOE Game</p>
+      <!-- <button class="btn" onclick="gameReset()">Reset Game</button> -->
     </header>
 
     <div class="multiPlayer">
-        <a href="mode_select.html" id="multi-player">Mode Select</a>
+      <a href="mode_select.html" id="multi-player">Mode Select</a>
     </div>
 
     <div id="register">
       <form action="">
         <div id="player_name">
-        <label for="name">
-          Type your Name:
-          <input type="text" id="name">
-        </label>
+          <label for="name">
+            Type your Name:
+            <input type="text" id="name" />
+          </label>
         </div>
         <div id="xter_select">
-        <button class="selectors" id="xbutton" onclick="chooseXorO('X')">X</button>
-        <button class="selectors" id="obutton" onclick="chooseXorO('O')">O</button>
+          <button class="selectors" id="xbutton" onclick="chooseXorO('X')">
+            X
+          </button>
+          <button class="selectors" id="obutton" onclick="chooseXorO('O')">
+            O
+          </button>
         </div>
       </form>
-    </div>
-      <div class="result">
-        <p id="remarks">Remarks</p>
-      </div>
-    
-      
-      <table class="gameboard">
-        <tr>
-          <td class="box" id="00"></td>
-          <td class="box vertical" id="01"></td>
-          <td class="box" id="02"></td>
-        </tr>
-        <tr>
-          <td class="box horizontal" id="10"></td>
-          <td class="box vertical horizontal" id="11"></td>
-          <td class="box horizontal" id="12"></td>
-        </tr>
-        <tr>
-          <td class="box" id="20"></td>
-          <td class="box vertical" id="21"></td>
-          <td class="box" id="22"></td>
-        </tr>
-      </table>
 
-    <script src="scripts/main.js"></script>
-</body>
+      <div id="score-record">
+        <div class="player">
+          <div class="badge" id="player-label">
+            Player
+          </div>
+          <span id="player1Score">0</span>
+        </div>
+        <div class="computer">
+          <div class="badge" id="computer-label">
+            Computer
+          </div>
+          <span id="computerScore">0</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="result">
+      <p id="remarks">Remarks</p>
+    </div>
+
+    <table class="gameboard">
+      <tr>
+        <td class="box" id="00"></td>
+        <td class="box vertical" id="01"></td>
+        <td class="box" id="02"></td>
+      </tr>
+      <tr>
+        <td class="box horizontal" id="10"></td>
+        <td class="box vertical horizontal" id="11"></td>
+        <td class="box horizontal" id="12"></td>
+      </tr>
+      <tr>
+        <td class="box" id="20"></td>
+        <td class="box vertical" id="21"></td>
+        <td class="box" id="22"></td>
+      </tr>
+    </table>
+
+    <div id="chart-div">
+      <canvas id="chart"></canvas>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
+    "></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  
+
+  <!-- <script>
+    var x = ['player', 'computer'];
+  var y = [5, 6];
+  var z = ['red', 'green']
+  var mychart = new Chart('chart', {
+    type: 'bar',
+    data: {
+      labels: x,
+      datasets: [{
+        label: 'Player and computer scores compared',
+        data: y,
+        backgroundColor: z
+      }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+  })
+  </script> -->
+  </body>
 </html>
