@@ -1,110 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <title>Tic Tac Toe</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/mode_select.css">
+    <title>TIC TAC TOE</title>
+</head>
+<body>
     <header>
-      <p>TIC TAC TOE Game</p>
-      <!-- <button class="btn" onclick="reloadPage()">Reset Game</button> -->
+        <p>TIC TAC TOE Game</p>
     </header>
 
-    <div class="multiPlayer">
-      <a href="mode_select.html" id="multi-player">Mode Select</a>
+    <div id="mode_select_form">
+        <form action="" id="mode_select" onclick="mode_select()">
+            <div class="div">
+                <label for="radio1">
+                    Player Vs Computer
+                    <input type="radio" name="mode" id="radio1">
+                </label>
+            </div>
+            <div class="div">
+                <label for="radio2">
+                    2 Player
+                    <input type="radio" name="mode" id="radio2">
+                </label>
+            </div>
+            <!-- <div>
+                <button class="btn" type="submit">
+                    Continue
+                </button>
+            </div> -->
+        </form>
     </div>
-
-    <div id="register">
-      <form action="">
-        <div id="player_name">
-          <label for="name">
-            Player 1 Name:
-            <input type="text" id="name" />
-          </label>
-        </div>
-        <div id="player_name">
-          <label for="name">
-            Player 2 Name:
-            <input type="text" id="name" />
-          </label>
-        </div>
-        <div id="xter_select">
-          <button class="selectors" id="xbutton" onclick="chooseXorO('X')">
-            X
-          </button>
-          <button class="selectors" id="obutton" onclick="chooseXorO('O')">
-            O
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <!-- <div class="playerName">
-        <a href="#" id="player-name" onclick="newPlayerNames()">Change Player Name</a>
-      </div>  
-      <div class="score">
-        <div class="badge" id="player1-label">
-          player1
-        </div>
-        <div class="badge" id="player2-label">
-          player2
-        </div>
-        <span id="player1Score">0</span>:<span id="player2Score">0</span>
-      </div>
-    
-      <div class="draw_totalPlays">
-        <div class="draw">
-          Total Draws: <span id="total-draws">0</span>
-        </div>
-        <div class="totalPlays">
-          Total Plays: <span id="total-plays">0</span>
-        </div>
-      </div> -->
-
-    <div class="result">
-      <p id="remarks">Remarks</p>
-    </div>
-
-    <table class="gameboard">
-      <tr>
-        <td class="box" id="00"></td>
-        <td class="box vertical" id="01"></td>
-        <td class="box" id="02"></td>
-      </tr>
-      <tr>
-        <td class="box horizontal" id="10"></td>
-        <td class="box vertical horizontal" id="11"></td>
-        <td class="box horizontal" id="12"></td>
-      </tr>
-      <tr>
-        <td class="box" id="20"></td>
-        <td class="box vertical" id="21"></td>
-        <td class="box" id="22"></td>
-      </tr>
-    </table>
-    <!-- <div class="container">
-   <table>
-       <tr>
-           <td></td>
-           <td class="vertical"> </td>
-           <td>  </td>
-       </tr>
-       <tr>
-           <td class="horizontal"> </td>
-           <td class="vertical horizontal">  </td>
-           <td class="horizontal"></td>
-       </tr>
-       <tr>
-           <td> </td>
-           <td class="vertical">  </td>
-           <td> </td>
-       </tr>
-   </table>
-</div> -->
-
-    <script src="scripts/index0.js"></script>
-  </body>
+    <script src="scripts/mode_select.js"></script>
+</body>
 </html>

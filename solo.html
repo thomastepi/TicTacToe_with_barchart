@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
+    "></script>
     <title>Tic Tac Toe</title>
   </head>
   <body>
@@ -14,7 +16,7 @@
     </header>
 
     <div class="multiPlayer">
-      <a href="mode_select.html" id="multi-player">Mode Select</a>
+      <a href="index.html" id="multi-player">Mode Select</a>
     </div>
 
     <div id="register">
@@ -38,13 +40,13 @@
       <div id="score-record">
         <div class="player">
           <div class="badge" id="player-label">
-            Player
+            Player Score
           </div>
           <span id="player1Score">0</span>
         </div>
         <div class="computer">
           <div class="badge" id="computer-label">
-            Computer
+            Computer Score
           </div>
           <span id="computerScore">0</span>
         </div>
@@ -77,36 +79,8 @@
       <canvas id="chart"></canvas>
     </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js
-    "></script>
+    
     <script type="text/javascript" src="scripts/main.js"></script>
   
-
-  <!-- <script>
-    var x = ['player', 'computer'];
-  var y = [5, 6];
-  var z = ['red', 'green']
-  var mychart = new Chart('chart', {
-    type: 'bar',
-    data: {
-      labels: x,
-      datasets: [{
-        label: 'Player and computer scores compared',
-        data: y,
-        backgroundColor: z
-      }]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-  })
-  </script> -->
   </body>
 </html>

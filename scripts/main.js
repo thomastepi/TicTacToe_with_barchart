@@ -68,7 +68,7 @@ const userMove = (id) => {
   if (testWin(player)) {
     player_score++
     check_number_of_wins(player_score);
-    console.log(player_score, computer_score);
+    //console.log(player_score, computer_score);
     player_score_span.innerHTML = player_score;
     return;
   }
@@ -94,7 +94,7 @@ const computerMove = () => {
   if (testWin(computer)) {
     computer_score++
     check_number_of_wins(computer_score)
-    console.log(player_score, computer_score)
+    //console.log(player_score, computer_score)
     computer_score_span.innerHTML = computer_score;
     return;
   }
@@ -106,7 +106,7 @@ const computerMove = () => {
 function check_number_of_wins(score){
   var number_of_plays = 0;
   while (number_of_plays<=10){
-    if(score == 3){
+    if(score == 6){
      create_chart(player_score, computer_score)
      computer_score = 0;
      player_score = 0;
@@ -118,7 +118,7 @@ function check_number_of_wins(score){
 
 // create chart using scores from game after 10 tries
 function create_chart(p_score, comp_score){
-  var x = [player, computer];
+  var x = ['player', 'computer'];
   var y = [p_score, comp_score];
   var z = ['red', 'green']
   
