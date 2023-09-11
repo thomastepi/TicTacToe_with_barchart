@@ -57,7 +57,8 @@ const enableBoard = () => {
 // When the user clicks a square, disables the square, and tests if the player has won, if it's a tie game, then generates a computer move and checks if the computer has won
 const userMove = (id) => {
   document.getElementById(id).removeAttribute("onclick");
-  document.getElementById(id).innerText = player1;
+  var player_move = document.getElementById(id)
+  player_move.innerText = player1;
 
   board[id[0]][id[1]] = player1;
   squaresLeft--;
@@ -65,11 +66,25 @@ const userMove = (id) => {
     return;
   }
   if (!testTie()) {
-    setTimeout(function () {
-      computerMove();
-    }, 250);
+    user2Move();
+    // setTimeout(function () {
+    //   computerMove();
+    // }, 250);
   }
+  if(player_move.innerText == player1) {
+    player_move.innerText = player2;
+  }
+  
 };
+
+const user2Move = (id) => {
+  document.getElementById(id).removeAttribute("onclick");
+  document.getElementById(id).innerText = player2;
+
+  board[id[0]][id[1]] = player2;
+  squaresLeft--;
+}
+
 
 // Generates a random computer move in an empty square and disables that square
 const computerMove = () => {

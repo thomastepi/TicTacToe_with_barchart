@@ -68,7 +68,6 @@ const userMove = (id) => {
   if (testWin(player)) {
     player_score++
     check_number_of_wins(player_score);
-    //console.log(player_score, computer_score);
     player_score_span.innerHTML = player_score;
     return;
   }
@@ -101,6 +100,21 @@ const computerMove = () => {
   testTie();
 }
 
+var my_input = document.getElementById('name').value;
+var playerLabel = document.getElementById('p_name');
+var btn = document.getElementById('btn')
+  btn.addEventListener('click', ()=>{
+    playerLabel.textContent = 'thomas';
+    //alert(my_input);
+    console.log(my_input)
+  });
+
+  // function player_name(){
+
+  // }
+  
+
+
 
 // build chart after first player to win 6 times
 function check_number_of_wins(score){
@@ -116,13 +130,13 @@ function check_number_of_wins(score){
     
   }
 
-// create chart using scores from game after 10 tries
+// raw data for building chart
 function create_chart(p_score, comp_score){
   var x = ['player', 'computer'];
   var y = [p_score, comp_score];
   var z = ['red', 'green']
   
-  var mychart = new Chart(chrt, {
+  new Chart(chrt, {
     type: 'bar',
     data: {
       labels: x,
@@ -139,7 +153,7 @@ function create_chart(p_score, comp_score){
               ticks: {
                   beginAtZero: true
               }
-          }]
+      }]
       }
   }
   })
@@ -177,7 +191,7 @@ const testWin = (symbol) => {
     disableBoard();
     setTimeout(function() {
     gameReset();
-  }, 4000);
+  }, 2000);
     return true;
   }
 }
@@ -204,7 +218,7 @@ const testTie = () => {
     disableBoard();
     setTimeout(function() {
       gameReset();
-    }, 4000);
+    }, 2000);
     return true;
   }
 }

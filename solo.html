@@ -22,10 +22,11 @@
     <div id="register">
       <form action="">
         <div id="player_name">
-          <label for="name">
+          <label for="name" id="p_name">
             Type your Name:
-            <input type="text" id="name" />
+            <input type="text" id="name">
           </label>
+            <button id="btn">enter</button>
         </div>
         <div id="xter_select">
           <button class="selectors" id="xbutton" onclick="chooseXorO('X')">
@@ -40,13 +41,13 @@
       <div id="score-record">
         <div class="player">
           <div class="badge" id="player-label">
-            Player Score
+            <p>Player Score</p>
           </div>
           <span id="player1Score">0</span>
         </div>
         <div class="computer">
           <div class="badge" id="computer-label">
-            Computer Score
+            <p>Computer Score</p> 
           </div>
           <span id="computerScore">0</span>
         </div>
